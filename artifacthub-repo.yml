@@ -1,0 +1,6 @@
+# Artifact Hub repository metadata
+# https://artifacthub.io/docs/topics/repositories/helm-charts/
+repositoryID: 00000000-0000-0000-0000-000000000000 # Placeholder: update with real ID after manual submission
+owners:
+  - name: Shivam Kumar
+    email: btwshivam@example.com # Replace with real maintainer email if known
