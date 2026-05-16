@@ -118,11 +118,15 @@ Kerno is the only eBPF tool in the Kubernetes ecosystem that produces a ranked, 
 ### 1 · Kubernetes (primary)
 
 ```bash
-helm install kerno ./deploy/helm/kerno \
+helm repo add kerno https://optiqor.github.io/kerno
+helm repo update
+helm install kerno kerno/kerno \
   -n kerno-system --create-namespace
 ```
 
 Within 30 seconds Kerno is running as a DaemonSet on every node, watching the kernel via eBPF, exposing `/metrics` for Prometheus, and ready for `kerno doctor`.
+
+> **Tip:** If you prefer to install from a local clone: `helm install kerno ./deploy/helm/kerno -n kerno-system --create-namespace`
 
 ```bash
 # Cluster-wide incident report - 30 seconds of real kernel data
@@ -167,7 +171,7 @@ docker run --rm --privileged --pid=host \
   ghcr.io/optiqor/kerno:latest doctor
 ```
 
-Multi-arch (`linux/amd64`, `linux/arm64`) images published to GHCR on every release.
+Multi-arch (`linux/amd64`, `linux/arm64`) images published to GHCR on every release. Graviton, Apple Silicon, and Raspberry Pi clusters work out of the box.
 
 ### Shell Completion
 

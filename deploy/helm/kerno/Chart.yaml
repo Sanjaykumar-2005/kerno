@@ -16,3 +16,12 @@ keywords:
   - kernel
   - prometheus
   - monitoring
+annotations:
+  artifacthub.io/license: Apache-2.0
+  artifacthub.io/signKey: ""
+  artifacthub.io/containsSecurityUpdates: "false"
+  artifacthub.io/prerelease: "false"
+  artifacthub.io/maintainers: |
+    - name: Shivam Kumar
+      github: btwshivam
+icon: https://raw.githubusercontent.com/optiqor/kerno/main/demo.gif # Using demo.gif as a placeholder until a logo is available
