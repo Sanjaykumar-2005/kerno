@@ -118,7 +118,7 @@ Kerno is the only eBPF tool in the Kubernetes ecosystem that produces a ranked, 
 ### 1 · Kubernetes (primary)
 
 ```bash
-helm repo add kerno https://optiqor.github.io/kerno
+helm repo add kerno https://optiqor.github.io/kerno-charts
 helm repo update
 helm install kerno kerno/kerno \
   -n kerno-system --create-namespace

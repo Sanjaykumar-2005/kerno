@@ -40,10 +40,9 @@ jobs:
       # We need to ensure artifacthub-repo.yml is in the root of gh-pages.
       - name: Push Artifact Hub metadata
         run: |
+          cp artifacthub-repo.yml /tmp/ahr.yml
           git checkout gh-pages
-          cp .github/artifacthub-repo.yml ./artifacthub-repo.yml || cp artifacthub-repo.yml ./artifacthub-repo.yml || true
-          if [ -f artifacthub-repo.yml ]; then
-            git add artifacthub-repo.yml
-            git commit -m "chore: update artifacthub-repo.yml" || echo "No changes to commit"
-            git push origin gh-pages
-          fi
+          cp /tmp/ahr.yml ./artifacthub-repo.yml
+          git add artifacthub-repo.yml
+          git commit -m "chore: update artifacthub-repo.yml" || echo "No changes to commit"
+          git push origin gh-pages
