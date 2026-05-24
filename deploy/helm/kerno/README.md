@@ -11,7 +11,7 @@ Kerno is an eBPF-based kernel observability engine for Kubernetes. It diagnoses 
 ## Installation
 
 ```bash
-helm repo add kerno https://optiqor.github.io/kerno
+helm repo add kerno https://optiqor.github.io/kerno-charts
 helm repo update
 helm install kerno kerno/kerno -n kerno-system --create-namespace
 ```
